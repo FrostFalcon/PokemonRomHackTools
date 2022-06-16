@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EBB09CFC-0185-442F-AF37-7D1E14F153EA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>NewEditor</RootNamespace>
+    <AssemblyName>NewEditor</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\HelperFunctions.cs" />
+    <Compile Include="Data\NARC.cs" />
+    <Compile Include="Data\NARCTypes\LearnsetNARC.cs" />
+    <Compile Include="Data\NARCTypes\MapMatrixNARC.cs" />
+    <Compile Include="Data\NARCTypes\EvolutionDataNARC.cs" />
+    <Compile Include="Data\NARCTypes\MoveDataNARC.cs" />
+    <Compile Include="Data\NARCTypes\ScriptNARC.cs" />
+    <Compile Include="Data\NARCTypes\ZoneDataNARC.cs" />
+    <Compile Include="Data\NARCTypes\PokemonDataNARC.cs" />
+    <Compile Include="Data\NARCTypes\TextNARC.cs" />
+    <Compile Include="Data\TextHandler.cs" />
+    <Compile Include="Data\VersionConstants.cs" />
+    <Compile Include="Forms\MainEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainEditor.Designer.cs">
+      <DependentUpon>MainEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MoveEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MoveEditor.Designer.cs">
+      <DependentUpon>MoveEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OverworldEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OverworldEditor.Designer.cs">
+      <DependentUpon>OverworldEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PokemonEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PokemonEditor.Designer.cs">
+      <DependentUpon>PokemonEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ScriptEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ScriptEditor.Designer.cs">
+      <DependentUpon>ScriptEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TextViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TextViewer.Designer.cs">
+      <DependentUpon>TextViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms\TypeSwapEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TypeSwapEditor.Designer.cs">
+      <DependentUpon>TypeSwapEditor.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\MainEditor.resx">
+      <DependentUpon>MainEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MoveEditor.resx">
+      <DependentUpon>MoveEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OverworldEditor.resx">
+      <DependentUpon>OverworldEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ScriptEditor.resx">
+      <DependentUpon>ScriptEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TypeSwapEditor.resx">
+      <DependentUpon>TypeSwapEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\PokemonEditor.resx">
+      <DependentUpon>PokemonEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TextViewer.resx">
+      <DependentUpon>TextViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
